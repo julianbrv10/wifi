@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     class WifiScanReceiver extends BroadcastReceiver {
         public void onReceive(Context c, Intent intent) {
-            @SuppressLint("MissingPermission") List<ScanResult> wifiScanList = wifiManager.getScanResults();
+            List<ScanResult> wifiScanList = wifiManager.getScanResults();
             ArrayList<String> wifiArrayList = new ArrayList<String>();
 
             for (int i = 0; i < wifiScanList.size(); i++) {
